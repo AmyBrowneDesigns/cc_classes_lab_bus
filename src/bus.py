@@ -5,8 +5,15 @@ class Bus:
         self.passengers = []
 
     def drive(self):
-        return("Vroom vroom")
+        return("Brum brum")
 
-    def get_passengers_on_bus(self):
+    def passenger_count(self):
         return len(self.passengers)
         
+    def pick_up(self, new_passenger):
+        self.passengers.append(new_passenger)
+
+    def drop_off(self, passenger):
+        self.passengers.remove(passenger)
+
+    
